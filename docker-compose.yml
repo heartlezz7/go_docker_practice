@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: deploy-test
+    ports:
+      - 8080:8080
+    # depends_on:
+    #   - db
+  db:
+    image: mongo:latest
+    container_name: mongo-test-deployment
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=P@ssw0rd
+      - MONGO_INITDB_DATABASE=users
+    ports:
+      - 27017:27017
