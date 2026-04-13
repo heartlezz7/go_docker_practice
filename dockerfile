@@ -1,5 +1,5 @@
 # Stage 1: Build the Go application
-FROM golang:1.22 AS builder
+FROM golang:1.25.1 AS builder
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -18,7 +18,7 @@ RUN GOOS=linux GOARCH=amd64 go build -o main .
 # FROM gcr.io/distroless/base
 
 # use a minimal container for base image
-FROM alpine:latest
+FROM alpine:3.23
 
 # Set environment variables
 ENV PORT=8080 

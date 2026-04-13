@@ -21,7 +21,7 @@ func main() {
 	// APIS routes
 
 	serv.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, "pong")
+		c.JSON(200, "Hello World")
 	})
 
 	serv.POST("/login", func(c *gin.Context) {

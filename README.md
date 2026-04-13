@@ -4,7 +4,7 @@ A simple REST API built with Go and the Gin framework, containerized with Docker
 
 ## Tech Stack
 
-- **Go** 1.22
+- **Go** 1.25.1
 - **Gin** — HTTP web framework
 - **Docker** — multi-stage build with Alpine base image
 - **Docker Compose** — local orchestration with MongoDB
@@ -81,7 +81,7 @@ go run main.go
 
 The Dockerfile uses a two-stage build:
 
-1. **Builder stage** — compiles the Go binary (`golang:1.22`)
-2. **Runtime stage** — runs the binary on a minimal `alpine:latest` image
+1. **Builder stage** — compiles the Go binary (`golang:1.25.1`)
+2. **Runtime stage** — runs the binary on a minimal `alpine:3.23` image
 
 This keeps the final image small by excluding the Go toolchain.

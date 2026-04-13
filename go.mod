@@ -1,6 +1,6 @@
 module github.com/heartlezz7/go_docker_practice
 
-go 1.22.4
+go 1.25.1
 
 require (
 	github.com/bytedance/sonic v1.12.0 // indirect
